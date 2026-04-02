@@ -62,8 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       if (galleryGrid?.classList.contains('filtering')) return;
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       const filter = btn.dataset.filter;
       if (galleryGrid) {
         galleryGrid.classList.add('filtering');
@@ -111,11 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (img) lightboxImg.src = img.src;
     if (lightboxCap) lightboxCap.textContent = visibleItems[currentIndex].dataset.label || '';
     lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
     lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
@@ -124,6 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
       visibleItems = getVisibleItems();
       const idx = visibleItems.indexOf(item);
       if (idx !== -1) openLightbox(idx);
+    });
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        visibleItems = getVisibleItems();
+        const idx = visibleItems.indexOf(item);
+        if (idx !== -1) openLightbox(idx);
+      }
     });
   });
 
