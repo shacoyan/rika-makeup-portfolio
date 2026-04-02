@@ -468,7 +468,7 @@ h1, h2, h3 {
   max-width: 960px; margin: 0 auto; padding: 0 48px;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
 }
-.step-card { text-align: center; padding: 36px 20px; position: relative; }
+.step-card { text-align: center; padding: 36px 20px; position: relative; background: rgba(255,255,255,.3); border-radius: 12px; }
 .step-card:not(:last-child)::after {
   content: '→'; position: absolute; right: -16px; top: 50%;
   transform: translateY(-50%); color: rgba(0,0,0,.4); font-size: 1.2rem;
@@ -482,11 +482,11 @@ h1, h2, h3 {
   display: block; margin-bottom: 16px;
 }
 .step-title {
-  font-family: 'Jost', sans-serif; font-weight: 400;
-  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  font-family: 'Jost', sans-serif; font-weight: 600;
+  font-size: .9rem; letter-spacing: .05em;
   margin-bottom: 10px; color: #1A1A1A;
 }
-.step-desc { font-size: .82rem; color: rgba(0,0,0,.7); line-height: 1.7; }
+.step-desc { font-size: .92rem; color: rgba(0,0,0,.85); line-height: 1.7; }
 
 /* ─── Lightbox ─── */
 #lightbox {
