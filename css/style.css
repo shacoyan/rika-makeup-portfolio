@@ -157,17 +157,6 @@ h1, h2, h3 {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(80,0,80,.8) 0%, rgba(160,32,240,.15) 50%, transparent 100%);
 }
-.hero-accent {
-  position: absolute; top: 0; right: 0; width: 40%; height: 100%;
-  background: linear-gradient(180deg, rgba(255,20,147,.4) 0%, rgba(0,255,135,.25) 100%);
-  pointer-events: none;
-  animation: accent-pulse 3s ease-in-out infinite alternate;
-}
-@keyframes accent-pulse {
-  from { opacity: .3; }
-  to   { opacity: .7; }
-}
-.hero-content {
   position: relative; z-index: 2;
   padding: 0 72px 80px; width: 100%;
 }
