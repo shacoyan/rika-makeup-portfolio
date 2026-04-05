@@ -78,9 +78,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-purple), var(--pastel-cyan), var(--pastel-pink));
-  background-size: 400% 400%;
-  animation: holographic-shift 8s ease infinite;
+  background: var(--bg-main);
   pointer-events: none;
 }
 
@@ -98,19 +96,6 @@ button {
 /* ========================================
    @keyframes
    ======================================== */
-@keyframes holographic-shift {
-  0% { background-position: 0% 50%; }
-  25% { background-position: 50% 100%; }
-  50% { background-position: 100% 50%; }
-  75% { background-position: 50% 0%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes marquee-bg {
-  0% { background-position: 0% center; }
-  100% { background-position: 300% center; }
-}
-
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -202,8 +187,7 @@ button {
   width: 0;
   height: 3px;
   border-radius: 2px;
-  background: var(--y2k-grad);
-  box-shadow: 0 0 6px rgba(191,0,255,0.5);
+  background: var(--hot-pink);
   transition: width 0.3s var(--ease-out);
 }
 
@@ -444,13 +428,10 @@ button {
    Marquee Strip
    ======================================== */
 .marquee-strip {
-  background: var(--holographic);
-  background-size: 300% auto;
-  animation: marquee-bg 6s linear infinite;
+  background: var(--hot-pink);
   color: var(--white);
   padding: 16px 0;
   overflow: hidden;
-  text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(191,0,255,0.3);
   border-top: 2px solid rgba(255,255,255,0.3);
   border-bottom: 2px solid rgba(255,255,255,0.3);
 }
@@ -539,8 +520,7 @@ button {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--holographic);
-  background-size: 200% 200%;
+  background: var(--hot-pink);
   flex-shrink: 0;
   box-shadow: 
     0 0 8px rgba(255, 0, 255, 0.6),
@@ -783,7 +763,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--holographic);
+  background: var(--hot-pink);
   opacity: 0;
   transition: opacity 0.3s var(--ease-out);
   border-radius: 50px;
@@ -922,8 +902,7 @@ button {
 
 #services {
   padding: var(--section-gap) 0;
-  background: var(--holographic);
-  background-size: 400% 400%;
+  background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-purple));
   position: relative;
   overflow: hidden;
 }
@@ -957,14 +936,7 @@ button {
   left: 0;
   right: 0;
   height: 5px;
-  background: var(--y2k-grad);
-  background-size: 400% auto;
-  animation: rainbow-border 3s linear infinite;
-}
-
-@keyframes rainbow-border {
-  0% { background-position: 0% center; }
-  100% { background-position: 400% center; }
+  background: var(--hot-pink);
 }
 
 .service-card:hover {
@@ -1220,9 +1192,7 @@ button {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--y2k-grad);
-  background-size: 400% auto;
-  animation: rainbow-border 3s linear infinite;
+  background: var(--hot-pink);
 }
 
 .contact-links {
@@ -1251,8 +1221,7 @@ button {
 .divider {
   width: 60px;
   height: 3px;
-  background: var(--y2k-grad);
-  background-size: 400% auto;
+  background: var(--hot-pink);
   margin: 0 auto;
   border-radius: 2px;
 }
