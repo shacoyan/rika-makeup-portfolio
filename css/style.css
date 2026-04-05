@@ -1024,12 +1024,13 @@ button {
 
 .step-card {
   text-align: center;
-  padding: 36px 20px;
-  background: rgba(255,182,217,0.45);
+  padding: 40px 24px 36px;
+  background: var(--white);
   border-radius: 20px;
   position: relative;
-  box-shadow: 0 6px 24px rgba(255,0,255,0.12), 0 0 12px rgba(191,0,255,0.08);
-  border: 2px solid rgba(255,0,255,0.2);
+  box-shadow: 0 6px 24px rgba(255,0,255,0.12);
+  border: 2px solid rgba(255,20,147,0.25);
+  border-top: 4px solid var(--hot-pink);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
 
@@ -1053,25 +1054,32 @@ button {
 .step-num {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-  font-size: 4.5rem;
+  font-size: 3rem;
   line-height: 1;
-  color: var(--hot-pink);
-  display: block;
-  margin-bottom: 12px;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--hot-pink);
+  margin-bottom: 20px;
 }
 
 .step-title {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-dark);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .step-desc {
-  font-size: 0.92rem;
-  color: var(--text-light);
-  line-height: 1.7;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  opacity: 0.75;
 }
 
 
